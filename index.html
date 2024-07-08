@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download File</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-wrapper">
+      <img
+        src="Resources/DezastreMainImage.png"
+        class="background-image"
+        alt="Background"
+      />
+      <div class="overlay"></div>
+    </div>
+    <div class="content">
+      <h2 class="downloadTitle">Emergency Guide Android Download</h2>
+      <button class="downloadBtn">Download APK</button>
+    </div>
+
+    <script>
+      document
+        .querySelector(".downloadBtn")
+        .addEventListener("click", function () {
+          const a = document.createElement("a");
+          a.href =
+            "Resources/application-658fd400-3246-4078-b19a-8ac08184ed0a.apk"; // Update this path to the actual file you want to download
+          a.download = "EmergencyGuide.apk"; // Update this filename as needed
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        });
+    </script>
+  </body>
+</html>
